@@ -11,13 +11,14 @@ public class SungJukImpl implements SungJuk {
 	private int eng;
 	private int math;
 	private int tot;
-	private int avg;
+	private double avg;
 	
 	public SungJukImpl() {
 		Scanner scan = new Scanner(System.in);
+		
 		System.out.println("[실행결과]");
 		System.out.println("이름 입력 :");
-		name = scan.next();
+		this.name = scan.next();
 		System.out.println("국어 입력 :");
 		kor = scan.nextInt();
 		System.out.println("영어 입력 :");
@@ -28,14 +29,15 @@ public class SungJukImpl implements SungJuk {
 	
 	@Override
 	public void calc() {
-		tot = (kor+eng+math+tot+avg);
-		avg = (kor+eng+math+tot+avg)/5;
+		tot = (kor+eng+math);
+		avg = (double)tot/3;
 	}
 
 	@Override
 	public void display() {
-		System.out.println("총점은 "+ tot);
-		System.out.println("평균은 "+ avg);
+		System.out.println("이름	국어	영어	수학	총점	평균");
+		System.out.println(name+ "\t" + kor+ "\t" + eng+ "\t" + math 
+				+ "\t" + tot + "\t" + String.format("%.2f", avg));
 	}
 
 }

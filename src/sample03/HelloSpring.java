@@ -2,7 +2,8 @@ package sample03;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
-
+import org.springframework.stereotype.Component;
+@Component
 public class HelloSpring {
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = new FileSystemXmlApplicationContext("src/applicationContext.xml"); //web.xml빼곤 기본xml아니라서 읽어오기 위치 를 써줘야되.

@@ -4,9 +4,14 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	 
 	
-	<context:component-scan base-package="sample03"/> <!-- xml에 내용이 너무 길어지는 것을 줄였다. class 부에 Component로 맞춰줘서 설정.  MessageBeanKo -->
-	<context:component-scan base-package="sample04"/>  
-	<context:component-scan base-package="sample05"/>  
+	 <!-- <context:component-scan base-package="sample03"/>  -->
+	 <!-- xml에 내용이 너무 길어지는 것을 줄였다. class 부에 Component로 맞춰줘서 설정.  MessageBeanKo -->
+	  <context:component-scan base-package="sample04"/>  
+	 
+	<!-- sample05 -->
+	  <!-- <context:component-scan base-package="sample05"/>  -->
+	<!--  <bean id="sungJukImpl" class="sample05.SungJukImpl"></bean> -->
 	  
 </beans>
